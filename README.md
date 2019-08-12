@@ -32,11 +32,16 @@ Created with [React](https://reactjs.org/), [Ruby on Rails](https://rubyonrails.
 * Registered users can add a username, edit and delete their account
 
 
-
 ## ERD
 
-<img src="assets/erd/erd.jpg" alt="entity relationship diagram" width="400"/>
-<img src="assets/erd/sign-up-flow.jpg" alt="user login flow" width="400"/> 
+<img src="assets/setlist_generator_ERD.png" alt="entity relationship diagram" width="400"/>
+
+## Wire Frames
+
+<img src="assets/homescreen_wf.png" alt="homescreen" width="400"/> 
+<img src="assets/make_a_setlist_wf.png" alt="make a setlist" width="400"/> 
+<img src="assets/add_a_song_wf.png" alt="add a song" width="400"/> 
+<img src="assets/archives_wf.png" alt="archives" width="400"/> 
 
 # Time line
 Day 1 (Monday)      Get the back end running with a hardcoded list of songs
