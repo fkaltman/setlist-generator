@@ -34,7 +34,7 @@ Created with [React](https://reactjs.org/), [Ruby on Rails](https://rubyonrails.
 
 ## ERD
 
-<img src="assets/setlist_generator_ERD.png" alt="entity relationship diagram" width="400"/>
+<img src="assets/sg_erd.png" alt="entity relationship diagram" width="400"/>
 
 ## Wire Frames
 
