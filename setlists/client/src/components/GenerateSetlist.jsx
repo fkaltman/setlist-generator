@@ -12,7 +12,8 @@ export default class GenerateSetlist extends Component {
   render() {
     return (
       <div>
-      <h2>Generate Setlist</h2>  
+        <h2>Rearrange songs below...</h2> 
+        <button className="add-a-song-to-the-list-button"> Add a new song </button>
       </div>
     )
   }
