@@ -44,7 +44,7 @@ Created with [React](https://reactjs.org/), [Ruby on Rails](https://rubyonrails.
 <img src="assets/archives_wf.png" alt="archives" width="400"/> 
 
 # Time line
-Day 1 (Monday)      Get the back end running with a hardcoded list of songs
-Day 2 (Tuesday)     Start front end, CRUD on songs and get random lists generating
-Day 3 (Wednesday)   React DnD, major styling/responsiveness & saving generated setlists to a database
-Day 4 (Thursday)    Auth, more styling, email out lists
+*Day 1 (Monday)      Get the back end running with a hardcoded list of songs
+*Day 2 (Tuesday)     Start front end, CRUD on songs and get random lists generating
+*Day 3 (Wednesday)   React DnD, major styling/responsiveness & saving generated setlists to a database
+*Day 4 (Thursday)    Auth, more styling, email out lists

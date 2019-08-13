@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-08-12
+  venue: MyString
+  citystate: MyString
+  length: 2019-08-12 10:34:59
+  notes: MyText
+  archived: false
+
+two:
+  date: 2019-08-12
+  venue: MyString
+  citystate: MyString
+  length: 2019-08-12 10:34:59
+  notes: MyText
+  archived: false
