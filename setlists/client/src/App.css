@@ -1,33 +1,43 @@
-.App {
+
+/* --------- Home page ----------- */
+
+.big-title {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-buttons {
+  margin-top: 65vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.home-generate-a-list-button, .home-go-to-archives-button {
+  width: 86px;
+  height: 34px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 4px;
+  background-color: rgba(69, 78, 49, .6);
+  /* outline: 2px solid black; */
+  box-shadow: 0 0 3px rgb(19, 20, 17);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* .home-go-to-archives-button {
+  width: 80px;
+  height: 40px;
+  padding: 30px
+} */
+          /* button:focus, button:active, button:hover {
+            outline: none;
+          } */
+
+
+/* ----- input buttons for adding a song ----- */
+
+.song-input, .abbrev-input, .length-input {
+/* text-align: center; */
 }

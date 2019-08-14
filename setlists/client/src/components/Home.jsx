@@ -8,9 +8,10 @@ export default function Home() {
     <div>
       <h1 className="big-title">Setlist Generator</h1>
       <img className="typewritter" src="" />
-      <button className="home-generate-a-list-button"></button>
-      <button className="home-go-to-archives-button"></button>
-
+      <div className="home-buttons">
+        <button className="home-generate-a-list-button"></button>
+        <button className="home-go-to-archives-button"></button>
+        </div>
     </div>
   )
 }
