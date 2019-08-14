@@ -62,6 +62,6 @@ export const deleteSong = async (id) => {
 };
 
 export const editSong = async (id, updateSong) => {
-  const response = await axios.put(`${baseURL}songs/${id}`, { songs: updateSong })
+  const response = await axios.put(`${baseURL}songs/${id}`, { song: updateSong })
   return response.data
 };

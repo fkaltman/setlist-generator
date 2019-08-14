@@ -39,8 +39,15 @@ export default class App extends React.Component {
         abbreviation: "",
         length: ""
       }
-
     })
+  }
+
+  songUpdateHandleSubmit = async (songData) => {
+    const { id, ...data } = songData;
+    const updateSong = await editSong(id, data)
+    this.setState((prevState) => ({
+      songs: prevState.songs.map(song => id === song.id ? updateSong : song)
+    }))
   }
 
   removeSong = async (id) => {
@@ -52,15 +59,6 @@ export default class App extends React.Component {
     }))
   }
 
-
-  updateSong = async () => {
-    const updatedSong = await editSong(this.state.updatingId, this.state.formData)
-    this.setState((prevState) => ({
-      // map through the songs and if it is the id selected by the user 
-      // replace its info with the updated info
-      songs: prevState.songs.map(song => this.state.updatingId === song.id ? updatedSong : song)
-    }))
-  }
 
   // Identical to the other handleChange
   handleChange = (e) => {
@@ -86,7 +84,6 @@ export default class App extends React.Component {
 
   // Set the form data to the selected song and store its id
   setFormData = (id) => {
-    console.log("boobs")
     const currentSong = this.state.songs.find(song => song.id === id)
     this.setState({
       formData: currentSong,
@@ -110,13 +107,12 @@ export default class App extends React.Component {
           removeSong={this.removeSong}
           handleChange={this.handleChange}
           // Below is passing updateSong to SongsMasterList
-          updateSong={this.updateSong}
           setFormData={this.setFormData}
+          songUpdateHandleSubmit={this.songUpdateHandleSubmit}
         />
       </div>
     )
   }
 }
-
 
 

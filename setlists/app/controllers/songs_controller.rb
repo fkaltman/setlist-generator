@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all
+    # the .order below will keep the list alpha order (!)
+    @songs = Song.all.order(:id)
     render json: @songs, status: :ok
   end
 
