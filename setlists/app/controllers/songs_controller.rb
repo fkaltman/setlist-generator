@@ -15,10 +15,13 @@ class SongsController < ApplicationController
   end
 
   def create
-    @setlist = Setlist.find(params[:song_id])
+    # @setlist = Setlist.find(params[:song_id])
     @song = Song.new(song_params)
-    @song.setlists << @song
+    # Below is a method that saves (??)
+    if @song.save
+    # @song.setlists << @song
     render json: @song
+    end
   end
 
   # def edit
@@ -36,7 +39,7 @@ class SongsController < ApplicationController
 def destroy 
   @song = Song.find(params[:id])
   @song.destroy
-  render json: @song
+  # render json: @song
 end
 
 private

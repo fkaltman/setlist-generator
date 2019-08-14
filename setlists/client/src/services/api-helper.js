@@ -2,7 +2,9 @@ import axios from 'axios';
 
 const baseURL = "http://localhost:3000/"
 
+
 // ------------------setlist api calls----------------------- //
+
 
 export const fetchSetlists = async () => {
   const response = await axios.get(`${baseURL}setlists`)
@@ -16,7 +18,7 @@ export const fetchSetlist = async (id) => {
 };
 
 export const createSetlist = async (setlistData) => {
-  const response = await axios.post(`${baseURL}setlists`, { setlist: setlistData })
+  const response = await axios.post(`${baseURL}setlists`, setlistData)
   return response.data
 };
 
@@ -29,7 +31,6 @@ export const editSetlist = async (id, updateSetlist) => {
   const response = await axios.put(`${baseURL}setlists/${id}`, { setlists: updateSetlist })
   return response.data
 };
-
 
 
 // ------------------song api calls----------------------- //
@@ -46,12 +47,17 @@ export const fetchSong = async (id) => {
 };
 
 export const createSong = async (songData) => {
-  const response = await axios.post(`${baseURL}songs`, { song: songData })
-  return response.data
+  try {
+    const response = await axios.post(`${baseURL}songs`, songData)
+    return response.data
+  } catch (error) {
+    console.log(error.response)
+    return false
+  }
 };
 
 export const deleteSong = async (id) => {
-  const response = await axios.delete(`$baseURL}songs/${id}`)
+  const response = await axios.delete(`${baseURL}songs/${id}`)
   return response.data
 };
 

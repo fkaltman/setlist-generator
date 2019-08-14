@@ -5,22 +5,21 @@ export default class SongsMasterList extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className="all-songs-map">
         {this.props.songs.map((song) => (
-          <div key={song.id}>
-            <h3>Abbreviation: </h3>
-            <h3>{song.abbreviation}</h3>
-            <h4>Song: </h4>
-            <h4>{song.name}</h4>
+          <div key={song.id} className="all-songs-box">
+            <div className="song-text">{song.name}</div>
+            <div className="abbrev-text">{song.abbreviation}</div>
+            <div className="song-length">{song.length}</div><br />
             {/* Edit songs button */}
-            <button onClick={() => {
+            <div><button className="song-edit-button" onClick={() => {
               this.props.setFormData(song.id)
               this.setState({})
-            }}>Edit</button>
+            }}>Edit</button></div>
             {/* Delete Songs button */}
-            <button onClick={() => {
+            <div><button className="song-delete-button" onClick={() => {
               this.props.removeSong(song.id)
-            }}>Delete</button>
+            }}>Delete</button></div>
           </div >
         ))
         }

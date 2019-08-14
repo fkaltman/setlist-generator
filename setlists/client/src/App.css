@@ -21,23 +21,111 @@
   background-color: rgba(69, 78, 49, .6);
   /* outline: 2px solid black; */
   box-shadow: 0 0 3px rgb(19, 20, 17);
-
 }
 
 
+/* ----- Add a song form----- */
 
-/* .home-go-to-archives-button {
-  width: 80px;
-  height: 40px;
-  padding: 30px
-} */
-          /* button:focus, button:active, button:hover {
-            outline: none;
-          } */
 
+.add-song-form {
+  margin-bottom: 40px;
+}
 
 /* ----- input buttons for adding a song ----- */
 
-.song-input, .abbrev-input, .length-input {
-/* text-align: center; */
+.add-song-header {
+text-align: center;
+margin-top: 40px;
+} 
+
+.new-song-inputs {
+  display: flex;
+  justify-content: center;
 }
+
+.song-input, .abbrev-input, .length-input {
+  background-color: rgb(234, 236, 171);
+  padding: 6px;
+  margin: 8px;
+  border-radius: 4px;
+} 
+
+.song-input {
+    width: 430px;
+}
+
+.abbrev-input{
+   width: 150px;
+   margin-left: 3vw;
+}
+
+.length-input {
+   background-color: rgb(234, 236, 171);
+} 
+
+.save-song-button {
+  background-color: rgb(215, 219, 215);
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+/* button:focus, button:active, button:hover {
+   outline: none;
+} */
+
+/* ----- input fields for adding a song ----- */
+
+.all-songs-map {
+  /* display: grid; */
+  font-size: 16px;
+  /* text-align: center; */
+  margin: auto;
+  /*  next two lines make the wee scrollable box */
+  height: 500px;
+  overflow: scroll;
+}
+
+.all-songs-box {
+  display: grid;
+  grid-template-columns: 6fr 2fr 1fr 0fr 1fr 1fr;
+  background-color: rgba(225, 228, 225, 0.534);
+  width: 550px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.song-text, .song-length, .abbrev-text {
+  margin: auto 0; 
+}
+
+.abbrev-text {
+  font-weight: bold;
+}
+
+/* ----- buttons for editing and deleting an individual song ----- */
+
+.song-delete-button {
+  font-size: 10px;
+  background-color: rgb(215, 219, 215);
+  height: 30px;
+  width: 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+ .song-edit-button {
+  font-size: 10px;
+  background-color: rgb(215, 219, 215);
+  height: 28px;
+  width: 40px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
