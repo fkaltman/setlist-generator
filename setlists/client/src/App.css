@@ -31,7 +31,7 @@
   margin-bottom: 40px;
 }
 
-/* ----- input buttons for adding a song ----- */
+/* ----- input & buttons for adding a song ----- */
 
 .add-song-header {
 text-align: center;
@@ -44,7 +44,7 @@ margin-top: 40px;
 }
 
 .song-input, .abbrev-input, .length-input {
-  background-color: rgb(234, 236, 171);
+  background-color: rgba(234, 236, 171, 0.733);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
@@ -54,26 +54,22 @@ margin-top: 40px;
     width: 430px;
 }
 
-.abbrev-input{
+.abbrev-input {
    width: 150px;
    margin-left: 3vw;
 }
 
-.length-input {
+/* .length-input {
    background-color: rgb(234, 236, 171);
-} 
+}  */
 
 .save-song-button {
-  background-color: rgb(215, 219, 215);
+  background-color: rgba(234, 236, 171, 0.5);
   padding: 6px 20px;
   margin: 8px 0;
-  border: none;
+  border: 2ps solid grey;
   border-radius: 4px;
 }
-
-/* button:focus, button:active, button:hover {
-   outline: none;
-} */
 
 /* ----- input fields for adding a song ----- */
 
@@ -89,8 +85,8 @@ margin-top: 40px;
 
 .all-songs-box {
   display: grid;
-  grid-template-columns: 6fr 2fr 1fr 0fr 1fr 1fr;
-  background-color: rgba(225, 228, 225, 0.534);
+  grid-template-columns: 6fr 2fr 1fr 0fr 1fr 1fr .25fr;
+  background-color: rgba(225, 228, 225, 0.5);
   width: 550px;
   height: 50px;
   margin: 10px auto;
@@ -113,9 +109,9 @@ margin-top: 40px;
 
 .song-delete-button {
   font-size: 10px;
-  background-color: rgb(215, 219, 215);
-  height: 30px;
-  width: 50px;
+  background-color: rgba(240, 155, 121, 0.527);
+  height: 28px;
+  width: 46px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
@@ -123,13 +119,59 @@ margin-top: 40px;
 
  .song-edit-button {
   font-size: 10px;
-  background-color: rgb(215, 219, 215);
+  background-color: rgba(215, 218, 134, 0.5);
   height: 28px;
-  width: 40px;
+  width: 42px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
 }
 
+.edit-song-form {
+  text-align: center;
+  /* display: flex;
+  justify-content: flex-start; */
+}
 
+.edit-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-song-input {
+  /* display: flex;
+  justify-content: flex-start; */
+  background-color: rgba(234, 236, 171, 0.5);
+  padding: 6px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.edit-abbrev-input {
+  /* display: flex;
+  justify-content: flex-start; */
+  background-color: rgba(234, 236, 171, 0.5);
+  padding: 6px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.edit-length-input {
+  /* display: flex;
+  justify-content: flex-start; */
+  background-color: rgba(234, 236, 171, 0.5);
+  padding: 6px;
+  margin: 8px;
+  border-radius: 4px;
+}
+
+.edit-save-song-button {
+  /* display: flex;
+  justify-content: flex-start; */
+  background-color: rgba(234, 236, 171, 0.5);
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: 2ps solid grey;
+  border-radius: 4px;
+}
 
