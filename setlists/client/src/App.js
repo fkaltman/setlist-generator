@@ -4,6 +4,9 @@ import { fetchSongs, createSong, fetchSong, deleteSong, editSong } from './servi
 import Home from './components/Home';
 import SongsMasterList from './components/SongsMasterList';
 import SongCreateForm from './components/SongCreateForm';
+import SetlistArchives from './components/SetlistArchives'
+import { Route, Link } from "react-router-dom";
+
 
 
 export default class App extends React.Component {
@@ -94,23 +97,38 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Home /> */}
-        <SongCreateForm
-          songCreateHandleSubmit={this.songCreateHandleSubmit}
-        />
-        <SongsMasterList
-          // Below two lines are passing data, note the presence of "state"
-          // compaired to the methods below them
-          songs={this.state.songs}
-          formData={this.state.formData}
-          // Below is how we pass in a method that is defined in this component
-          removeSong={this.removeSong}
-          handleChange={this.handleChange}
-          // Below is passing updateSong to SongsMasterList
-          setFormData={this.setFormData}
-          songUpdateHandleSubmit={this.songUpdateHandleSubmit}
-        />
+
+
+        <switch>
+          <Route path='/' component={Home}></Route>
+          <Route path='/setlist-archives' render={<SetlistArchives />} />
+          <Route path='/songs-masterlist' render={() => (
+            <SongsMasterList
+              // Below two lines are passing data, note the presence of "state"
+              // compaired to the methods below them
+              songs={this.state.songs}
+              formData={this.state.formData}
+              // Below is how we pass in a method that is defined in this component
+              removeSong={this.removeSong}
+              handleChange={this.handleChange}
+              // Below is passing updateSong to SongsMasterList
+              setFormData={this.setFormData}
+              songUpdateHandleSubmit={this.songUpdateHandleSubmit}
+            />)} />
+          <div className="home-buttons">
+            <button className="home-generate-a-list-button" onClick={() => { }}>Generate a New Setlist</button>
+            <br />
+            <Link to='/setlist-archives'>
+              <button className="home-go-to-archives-button">Setlist Archives</button>
+            </Link>
+            <Link to='/songs-masterlist'>
+              <button className="home-go-songs-masterlist-button">Songs Masterlist</button>
+            </Link>
+          </div>
+        </switch>
       </div>
+
+
     )
   }
 }

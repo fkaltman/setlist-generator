@@ -32,7 +32,7 @@ export default class SongCreateForm extends React.Component {
   render() {
     return (
       <div className="add-song-form">
-        <h2 className="add-song-header">Add a song to the database</h2>
+        <h2 className="add-song-header">Add a song to the database...</h2>
         <div className="new-song-inputs">
           <form onSubmit={(e) => {
             e.preventDefault()

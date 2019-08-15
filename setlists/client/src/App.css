@@ -3,24 +3,34 @@
 
 .big-title {
   text-align: center;
+  margin-top: 10vh;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
 }
 
 .home-buttons {
   margin-top: 65vh;
-  display: flex;
-  justify-content: center;
- 
+  text-align: center;
 }
 
-.home-generate-a-list-button, .home-go-to-archives-button {
-  width: 86px;
+.home-generate-a-list-button { 
+  font-family: 'Special Elite', cursive;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(151, 160, 131, 0.4);
+}
+
+.home-go-to-archives-button, .home-go-songs-masterlist-button {
+  font-family: 'Special Elite', cursive;
+  width: 130px;
   height: 34px;
   padding: 10px;
   margin: 20px;
-  border-radius: 4px;
-  background-color: rgba(69, 78, 49, .6);
-  /* outline: 2px solid black; */
-  box-shadow: 0 0 3px rgb(19, 20, 17);
+  border-radius: 10px;
+  background-color: rgba(151, 160, 131, 0.4);
 }
 
 
@@ -34,6 +44,8 @@
 /* ----- input & buttons for adding a song ----- */
 
 .add-song-header {
+font-family: 'Special Elite', cursive;
+font-size: 16px;
 text-align: center;
 margin-top: 40px;
 } 
@@ -44,6 +56,7 @@ margin-top: 40px;
 }
 
 .song-input, .abbrev-input, .length-input {
+  font-family: 'Special Elite', cursive;
   background-color: rgba(234, 236, 171, 0.733);
   padding: 6px;
   margin: 8px;
@@ -64,22 +77,22 @@ margin-top: 40px;
 }  */
 
 .save-song-button {
+  font-family: 'Special Elite', cursive;
   background-color: rgba(234, 236, 171, 0.5);
   padding: 6px 20px;
   margin: 8px 0;
   border: 2ps solid grey;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 /* ----- input fields for adding a song ----- */
 
 .all-songs-map {
-  /* display: grid; */
   font-size: 16px;
-  /* text-align: center; */
   margin: auto;
   /*  next two lines make the wee scrollable box */
-  height: 500px;
+  height: 550px;
   overflow: scroll;
 }
 
@@ -109,7 +122,7 @@ margin-top: 40px;
 
 .song-delete-button {
   font-size: 10px;
-  background-color: rgba(240, 155, 121, 0.527);
+  background-color: rgba(166, 212, 152, 0.5);
   height: 28px;
   width: 46px;
   margin: 8px 0;
@@ -129,46 +142,37 @@ margin-top: 40px;
 
 .edit-song-form {
   text-align: center;
-  /* display: flex;
-  justify-content: flex-start; */
 }
 
+/* below line corrected the edit form to be inline */
 .edit-form {
   display: flex;
   flex-direction: row;
 }
 
 .edit-song-input {
-  /* display: flex;
-  justify-content: flex-start; */
-  background-color: rgba(234, 236, 171, 0.5);
+  background-color: rgba(209, 142, 122, 0.3);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
 }
 
 .edit-abbrev-input {
-  /* display: flex;
-  justify-content: flex-start; */
-  background-color: rgba(234, 236, 171, 0.5);
+  background-color: rgba(209, 142, 122, 0.3);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
 }
 
 .edit-length-input {
-  /* display: flex;
-  justify-content: flex-start; */
-  background-color: rgba(234, 236, 171, 0.5);
+  background-color: rgba(209, 142, 122, 0.3);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
 }
 
 .edit-save-song-button {
-  /* display: flex;
-  justify-content: flex-start; */
-  background-color: rgba(234, 236, 171, 0.5);
+  background-color: rgba(209, 142, 122, 0.3);
   padding: 6px 20px;
   margin: 8px 0;
   border: 2ps solid grey;
