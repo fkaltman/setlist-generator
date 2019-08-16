@@ -100,7 +100,8 @@ export default class App extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/generate-setlist' component={GenerateSetlist} />
+          <Route exact path='/generate-setlist' render={() => (
+            <GenerateSetlist formData={this.state.formData}/> )} />
           <Route path='/setlist-archives' component={SetlistArchives} />
           <Route path='/songs-masterlist' render={() => (
             <SongsMasterList

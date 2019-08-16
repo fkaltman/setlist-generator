@@ -6,21 +6,42 @@ export default class GenerateSetlist extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      tempSetlist: ''
+      tempSetlist: null
     }
   }
 
+
+
   getRandos = async () => {
-    const lol = await getRandomSong();
-    console.log(lol)
+    const randomList = await getRandomSong();
+    this.setState({
+      tempSetlist: randomList
+    })
+    console.log(randomList)
   }
 
   render() {
-    this.getRandos()
     return (
       <div>
-        <h2>Rearrange songs below...</h2>
-        <button className="add-a-song-to-the-list-button"> Add a new song </button>
+        <h2 className="generate-songs-text-header">Rearrange songs below...</h2>
+        {this.state.tempSetlist && (
+          <>
+            <div>set 1:</div>
+            {this.state.tempSetlist.set1.map(song =>
+              <div className="info" key={song.id}>
+                <h2>{song.abbreviation}{song.length}</h2>
+              </div>
+            )}
+            <div>set 2:</div>
+            {this.state.tempSetlist.set2.map(song =>
+              <div className="info" key={song.id}>
+                <h2>{song.abbreviation}  {song.length}</h2>
+              </div>
+            )}
+          </>
+        )}
+        <button className="add-a-song-to-the-list-button" onClick={this.getRandos}> Get a different random list </button>
+
       </div>
     )
   }

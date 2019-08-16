@@ -202,3 +202,12 @@ margin-top: 40px;
   border-radius: 4px;
 }
 
+
+/* ----- buttons for editing and deleting an individual song ----- */
+
+.generate-songs-text-header {
+  font-family: 'Special Elite', cursive;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+}
