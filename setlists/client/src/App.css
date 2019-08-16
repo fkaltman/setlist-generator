@@ -4,8 +4,8 @@
 .homepage {
   height: 100vh;
   background: linear-gradient(
-rgb(165, 220, 224),
-rgba(41, 84, 87, 0.3)
+rgb(236, 230, 220),
+rgb(119, 117, 113)
 );
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@ rgba(41, 84, 87, 0.3)
   width: 40vw;
   padding-top: 25vh;
   padding-left: 29vw;
+  opacity: .6;
 }
 
 .big-title {
@@ -38,7 +39,7 @@ rgba(41, 84, 87, 0.3)
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background-color: rgba(36, 159, 241, 0.37);
+  background-color: rgba(130, 198, 238, 0.37);
 }
 
 .home-go-to-archives-button, .home-go-songs-masterlist-button {
@@ -206,8 +207,43 @@ margin-top: 40px;
 /* ----- buttons for editing and deleting an individual song ----- */
 
 .generate-songs-text-header {
-  font-family: 'Special Elite', cursive;
-  font-size: 14px;
+  /* font-family: 'Special Elite', cursive; */
+  font-size: 12px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 6vh;
 }
+
+.rando-lists-page {
+  text-decoration: bold;
+    height: 100vh;
+    background: linear-gradient(
+  rgb(236, 230, 220),
+  rgb(119, 117, 113)
+  );
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+.two-rando-sets {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.set-one-title, .set-two-title {
+padding-bottom: 2vh;
+}
+
+.set-one {
+  /* width: 30vw; */
+  text-align: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.set-two {
+  /* width: 30vw; */
+  text-align: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+

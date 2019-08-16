@@ -101,8 +101,8 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/generate-setlist' render={() => (
-            <GenerateSetlist formData={this.state.formData}/> )} />
-          <Route path='/setlist-archives' component={SetlistArchives} />
+            <GenerateSetlist formData={this.state.formData} />)} />
+          {/* <Route path='/setlist-archives' component={SetlistArchives} /> */}
           <Route path='/songs-masterlist' render={() => (
             <SongsMasterList
               // Below two lines are passing data, note the presence of "state"
@@ -117,7 +117,7 @@ export default class App extends React.Component {
               songUpdateHandleSubmit={this.songUpdateHandleSubmit}
             />)} />
         </Switch>
-        </div>
+      </div>
     )
   }
 }

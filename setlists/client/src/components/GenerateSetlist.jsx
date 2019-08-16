@@ -10,7 +10,9 @@ export default class GenerateSetlist extends Component {
     }
   }
 
-
+  componentDidMount = async () => {
+   this.getRandos()
+ }
 
   getRandos = async () => {
     const randomList = await getRandomSong();
@@ -22,25 +24,35 @@ export default class GenerateSetlist extends Component {
 
   render() {
     return (
-      <div>
-        <h2 className="generate-songs-text-header">Rearrange songs below...</h2>
+      <div className="rando-lists-page">
+        <div className="generate-songs-text-header">
+          {/* <h1>How about this set list?</h1> */}
+          {/* <h2>Rearrange songs below...</h2> */}
+        </div>
+        <div className="two-rando-sets">
         {this.state.tempSetlist && (
           <>
-            <div>set 1:</div>
+            <div className="set-one">
+              <h1 className="set-one-title">Set 1:</h1>
             {this.state.tempSetlist.set1.map(song =>
               <div className="info" key={song.id}>
-                <h2>{song.abbreviation}{song.length}</h2>
+                <h3>{song.abbreviation}   {song.length}</h3>
               </div>
-            )}
-            <div>set 2:</div>
+            )
+          }
+          </div>
+            <div className="set-two">
+              <h1 className="set-two-title">Set 2:</h1>
             {this.state.tempSetlist.set2.map(song =>
-              <div className="info" key={song.id}>
-                <h2>{song.abbreviation}  {song.length}</h2>
+              <div className="info2" key={song.id}>
+                <h3>{song.abbreviation}  {song.length}</h3>
               </div>
             )}
+              </div>
           </>
         )}
-        <button className="add-a-song-to-the-list-button" onClick={this.getRandos}> Get a different random list </button>
+        </div>
+        {/* <button className="add-a-song-to-the-list-button" onClick={this.getRandos}> Get a different random list </button> */}
 
       </div>
     )
