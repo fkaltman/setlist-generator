@@ -1,6 +1,7 @@
 import React from 'react';
 import OneSongBox from './OneSongBox';
 import EditSongForm from './EditSongForm';
+import SongCreateForm from './SongCreateForm';
 
 export default class SongsMasterList extends React.Component {
   constructor(props) {
@@ -79,11 +80,11 @@ export default class SongsMasterList extends React.Component {
                 />
               </>
             }
-
           </div >
         ))
-        }
+      }
         </div>
+      <SongCreateForm />
     </div>
     )
   }

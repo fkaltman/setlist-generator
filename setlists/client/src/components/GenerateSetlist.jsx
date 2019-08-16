@@ -11,8 +11,8 @@ export default class GenerateSetlist extends Component {
   }
 
   componentDidMount = async () => {
-   this.getRandos()
- }
+    this.getRandos()
+  }
 
   getRandos = async () => {
     const randomList = await getRandomSong();
@@ -26,31 +26,32 @@ export default class GenerateSetlist extends Component {
     return (
       <div className="rando-lists-page">
         <div className="generate-songs-text-header">
-          {/* <h1>How about this set list?</h1> */}
-          {/* <h2>Rearrange songs below...</h2> */}
         </div>
         <div className="two-rando-sets">
-        {this.state.tempSetlist && (
-          <>
-            <div className="set-one">
-              <h1 className="set-one-title">Set 1:</h1>
-            {this.state.tempSetlist.set1.map(song =>
-              <div className="info" key={song.id}>
-                <h3>{song.abbreviation}   {song.length}</h3>
+          {this.state.tempSetlist && (
+            <>
+              <div className="set-one">
+                <h1 className="set-one-title">Set 1:</h1>
+
+                {this.state.tempSetlist.set1.map(song =>
+                  <div className="info" key={song.id}>
+                    <h3>{song.abbreviation}  {song.length} <button className="remove-button">remove</button></h3>
+                  </div>
+                )}
+
+                <button className="add-random-song">Add a song to this set</button>
               </div>
-            )
-          }
-          </div>
-            <div className="set-two">
-              <h1 className="set-two-title">Set 2:</h1>
-            {this.state.tempSetlist.set2.map(song =>
-              <div className="info2" key={song.id}>
-                <h3>{song.abbreviation}  {song.length}</h3>
+              <div className="set-two">
+                <h1 className="set-two-title">Set 2:</h1>
+                {this.state.tempSetlist.set2.map(song =>
+                  <div className="info2" key={song.id}>
+                    <h3>{song.abbreviation}  {song.length}<button className="remove-button-2">remove</button></h3>
+                  </div>
+                )}
+                <button className="add-random-song">Add a song to this set</button>
               </div>
-            )}
-              </div>
-          </>
-        )}
+            </>
+          )}
         </div>
         {/* <button className="add-a-song-to-the-list-button" onClick={this.getRandos}> Get a different random list </button> */}
 

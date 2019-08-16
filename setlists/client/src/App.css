@@ -55,6 +55,8 @@ rgb(119, 117, 113)
 /* ------ Master Songlist ------ */
 
 .master-songlist {
+  font-family: 'Special Elite', cursive;
+  font-size: 22px;
   text-align: center;
   padding-top: 5vh;
 
@@ -74,7 +76,7 @@ rgb(119, 117, 113)
 font-family: 'Special Elite', cursive;
 font-size: 16px;
 text-align: center;
-margin-top: 40px;
+margin-top: 7vh;
 } 
 
 .new-song-inputs {
@@ -113,7 +115,7 @@ margin-top: 40px;
 
 .all-songs-map {
   font-size: 16px;
-  margin-top: 7vh;
+  margin-top: 4vh;
   /*  next two lines make the wee scrollable box */
   height: 550px;
   overflow: scroll;
@@ -204,13 +206,10 @@ margin-top: 40px;
 }
 
 
-/* ----- buttons for editing and deleting an individual song ----- */
+/* -- buttons for editing/deleting individual songs -- */
 
 .generate-songs-text-header {
-  /* font-family: 'Special Elite', cursive; */
   font-size: 12px;
-  text-align: center;
-  margin-top: 6vh;
 }
 
 .rando-lists-page {
@@ -227,23 +226,32 @@ margin-top: 40px;
  
 .two-rando-sets {
   display: grid;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns:  1fr 2fr 2fr 1fr 2fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  ". set-one remove-button . set-two remove-button-2 .";
+  /* padding-left: 13vw; */
 }
 
 .set-one-title, .set-two-title {
-padding-bottom: 2vh;
+  font-family: 'Special Elite', cursive;
+  padding-top: 6vh;
+  padding-bottom: 2vh;
 }
 
 .set-one {
-  /* width: 30vw; */
-  text-align: center;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  grid-area: set-one;
 }
 
 .set-two {
-  /* width: 30vw; */
-  text-align: center;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  grid-area: set-two;
 }
 
+.remove-button {
+  grid-area: remove-button;
+}
+
+.remove-button-2 {
+  grid-area: remove-button-2;
+}
 
