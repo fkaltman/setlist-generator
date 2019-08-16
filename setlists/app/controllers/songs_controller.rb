@@ -37,15 +37,33 @@ class SongsController < ApplicationController
     end
   end
 
-def destroy 
-  @song = Song.find(params[:id])
-  @song.destroy
-  # render json: @song
-end
+  def destroy 
+    @song = Song.find(params[:id])
+    @song.destroy
+    # render json: @song
+  end
 
-private
+  def random_songs_list
+    @allSongs = Song.all
+    @randomSongs1 = make_random_list
+    @randomSongs2 = make_random_list
+    render json: { set1: @randomSongs1, set2: @randomSongs2}
+  end
+  
+  private
+  
+  def make_random_list 
+    randomList = []
+    while randomList.length < 15
+      randomIndex = rand(0...@allSongs.length)
+      randomList << @allSongs[randomIndex]
+      @allSongs = @allSongs - [@allSongs[randomIndex]]
+    end
+    p randomList
+    randomList
+  end
 
-def song_params
-  params.require(:song).permit(:name, :abbreviation, :length)
-end
+  def song_params
+    params.require(:song).permit(:name, :abbreviation, :length)
+  end
 end

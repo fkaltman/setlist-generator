@@ -4,8 +4,9 @@ import { fetchSongs, createSong, fetchSong, deleteSong, editSong } from './servi
 import Home from './components/Home';
 import SongsMasterList from './components/SongsMasterList';
 import SongCreateForm from './components/SongCreateForm';
-import SetlistArchives from './components/SetlistArchives'
-import { Route, Link } from "react-router-dom";
+import SetlistArchives from './components/SetlistArchives';
+import GenerateSetlist from './components/GenerateSetlist';
+import { Route, Link, Switch } from "react-router-dom";
 
 
 
@@ -97,11 +98,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-
-
-        <switch>
-          <Route path='/' component={Home}></Route>
-          <Route path='/setlist-archives' render={<SetlistArchives />} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/generate-setlist' component={GenerateSetlist} />
+          <Route path='/setlist-archives' component={SetlistArchives} />
           <Route path='/songs-masterlist' render={() => (
             <SongsMasterList
               // Below two lines are passing data, note the presence of "state"
@@ -115,20 +115,8 @@ export default class App extends React.Component {
               setFormData={this.setFormData}
               songUpdateHandleSubmit={this.songUpdateHandleSubmit}
             />)} />
-          <div className="home-buttons">
-            <button className="home-generate-a-list-button" onClick={() => { }}>Generate a New Setlist</button>
-            <br />
-            <Link to='/setlist-archives'>
-              <button className="home-go-to-archives-button">Setlist Archives</button>
-            </Link>
-            <Link to='/songs-masterlist'>
-              <button className="home-go-songs-masterlist-button">Songs Masterlist</button>
-            </Link>
-          </div>
-        </switch>
-      </div>
-
-
+        </Switch>
+        </div>
     )
   }
 }

@@ -37,7 +37,6 @@ export const editSetlist = async (id, updateSetlist) => {
 
 export const fetchSongs = async () => {
   const response = await axios.get(`${baseURL}songs`)
-  console.log(response);
   return response.data
 };
 
@@ -63,5 +62,12 @@ export const deleteSong = async (id) => {
 
 export const editSong = async (id, updateSong) => {
   const response = await axios.put(`${baseURL}songs/${id}`, { song: updateSong })
+  return response.data
+};
+
+// ------------------random song & list api calls----------------------- //
+
+export const getRandomSong = async () => {
+  const response = await axios.get(`${baseURL}randomSongs`)
   return response.data
 };

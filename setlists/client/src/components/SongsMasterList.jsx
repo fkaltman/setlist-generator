@@ -52,7 +52,9 @@ export default class SongsMasterList extends React.Component {
 
   render() {
     return (
-      <div className="all-songs-map">
+      <div>
+        <h3 className="master-songlist">Master Songlist</h3>
+        <div className="all-songs-map">
         {this.props.songs.map((song) => (
           // the line below doesn't really add functionality, the key
           // is required by react and the className is just for styling
@@ -81,7 +83,8 @@ export default class SongsMasterList extends React.Component {
           </div >
         ))
         }
-      </div>
+        </div>
+    </div>
     )
   }
 }
