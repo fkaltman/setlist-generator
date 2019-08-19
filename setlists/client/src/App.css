@@ -1,10 +1,11 @@
-
-/* --------- Home page ----------- */
+/* --------------------------------------- */
+/* ------------- Home page --------------- */
+/* --------------------------------------- */
 
 .homepage {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
-rgb(236, 230, 220),
+rgb(236, 213, 144),
 rgb(119, 117, 113)
 );
   margin: 0;
@@ -12,19 +13,73 @@ rgb(119, 117, 113)
 }
 
 .typewriter {
-  width: 40vw;
-  padding-top: 25vh;
-  padding-left: 29vw;
-  opacity: .6;
+  width: 140vw;
+  /* padding-bottom: 60px; */
+  opacity: .8;
 }
 
+/* 
 .big-title {
   text-align: center;
   margin: 0;
   padding-top: 10vh;
   font-family: 'Special Elite', cursive;
   font-size: 24px;
+}  */
+
+/* -------Typewritter title animation below----------- */
+/* ------------inspired by a codepen from------------- */
+/* ----------------Thiago Teles Pereira--------------- */
+
+html {
+  /* padding: 0;
+  margin: 0; */
+  height: 100vh;
+  min-height: 100%;
+  overflow: hidden;
 }
+
+body {
+  height: calc(100vh - 8em);
+}
+
+.line-1 {
+    padding-top: 20vh;
+    font-family: 'Special Elite', cursive;
+    /* position: relative; */
+    /* top: 50%;   */
+    width: 24em;
+    padding-top: 20vh;
+    margin: 0 auto;
+    /* border-right: 2px solid rgba(255,255,255,.75); */
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  /* Takes 3 seconds (4s) to "type" */
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 11em;}
+}
+
+/* Why do i need this line? */
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+/* ---------------------------------------- */
+/* ----------- Home page links  ----------- */
+/* ---------------------------------------- */
+
 
 .home-buttons {
   margin-top: 6vh;
@@ -52,79 +107,55 @@ rgb(119, 117, 113)
   background-color: rgba(152, 170, 111, 0.616);
 }
 
-/* ------ Master Songlist ------ */
+/* ---------------------------------------- */
+/* ----------- Segno Homebutton ----------- */
+/* ---------------------------------------- */
+
+
+.segno-image {
+  width: 2.5vw;
+  padding: 2.5vw;
+  opacity: 0.7;
+}
+
+/* --------------------------------------- */
+/* ----------- Master Songlist ----------- */
+/* --------------------------------------- */
+
+
+.masterlist-and-add-a-song {
+  height: 100vh;
+  background: rgb(153, 170, 170);
+  margin: 0;
+  padding: 0;
+}
 
 .master-songlist {
   font-family: 'Special Elite', cursive;
-  font-size: 22px;
+  font-size: 28px;
   text-align: center;
-  padding-top: 5vh;
-
+  margin-top: 0;
 }
 
-
-/* ----- Add a song form----- */
-
-
-.add-song-form {
-  margin-bottom: 40px;
-}
-
-/* ----- input & buttons for adding a song ----- */
-
-.add-song-header {
-font-family: 'Special Elite', cursive;
-font-size: 16px;
-text-align: center;
-margin-top: 7vh;
-} 
-
-.new-song-inputs {
-  display: flex;
-  justify-content: center;
-}
-
-.song-input, .abbrev-input, .length-input {
+.master-songlist-subtitle {
   font-family: 'Special Elite', cursive;
-  background-color: rgba(234, 236, 171, 0.733);
-  padding: 6px;
-  margin: 8px;
-  border-radius: 4px;
-} 
-
-.song-input {
-    width: 430px;
-}
-
-.abbrev-input {
-   width: 150px;
-   margin-left: 3vw;
-}
-
-.save-song-button {
-  font-family: 'Special Elite', cursive;
-  background-color: rgba(234, 236, 171, 0.5);
-  padding: 6px 20px;
-  margin: 8px 0;
-  border: 2ps solid grey;
-  border-radius: 4px;
   font-size: 14px;
+  text-align: center;
+  margin-top: 0;
 }
-
-/* ----- input fields for adding a song ----- */
 
 .all-songs-map {
   font-size: 16px;
-  margin-top: 4vh;
+  margin-top: 2vh;
   /*  next two lines make the wee scrollable box */
-  height: 550px;
+  height: 670px;
   overflow: scroll;
 }
 
-.all-songs-box {
+.all-songs-one-box {
   display: grid;
   grid-template-columns: 6fr 2fr 1fr 0fr 1fr 1fr .25fr;
-  background-color: rgba(225, 228, 225, 0.5);
+  background-color: rgba(242, 243, 242, 0.658);
   width: 550px;
   height: 50px;
   margin: 10px auto;
@@ -134,7 +165,7 @@ margin-top: 7vh;
 .song-text, .song-length, .abbrev-text {
   margin: auto 0; 
 }
-    
+
 .song-text {
   padding-left: 8px;
 }
@@ -143,25 +174,28 @@ margin-top: 7vh;
   font-weight: bold;
 }
 
-/* ----- buttons for editing and deleting an individual song ----- */
+
+/* ------------------------------------------------- */
+/* ----- Buttons for editing/deleting one song ----- */
+/* ------------------------------------------------- */
 
 .song-delete-button {
   font-size: 10px;
-  background-color: rgba(166, 212, 152, 0.5);
+  background-color: rgba(209, 142, 122, 0.3);
   height: 28px;
   width: 46px;
   margin: 8px 0;
-  border: none;
+  border: 2px solid rgba(209, 142, 122, 0.3);
   border-radius: 4px;
 }
 
- .song-edit-button {
+.song-edit-button {
   font-size: 10px;
   background-color: rgba(215, 218, 134, 0.5);
   height: 28px;
   width: 42px;
   margin: 8px 0;
-  border: none;
+  border: 2px solid rgba(168, 170, 104, 0.5);
   border-radius: 4px;
 }
 
@@ -169,7 +203,8 @@ margin-top: 7vh;
   text-align: center;
 }
 
-/* below line corrected the edit form to be inline */
+/* below line corrected the 
+edit form to be inline */
 
 .edit-form {
   display: flex;
@@ -205,53 +240,103 @@ margin-top: 7vh;
   border-radius: 4px;
 }
 
+/* -------------------------------- */
+/* -------- Add a song form-------- */
+/* -------------------------------- */
 
-/* -- buttons for editing/deleting individual songs -- */
+
+/* .add-song-form {
+  margin-bottom: 400px;
+} */
+
+/* --------------------------------------------- */
+/* ----- Input & buttons for adding a song ----- */
+/* --------------------------------------------- */
+
+.add-song-header {
+  font-family: 'Special Elite', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5vh;
+} 
+
+.new-song-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.song-input, .abbrev-input, .length-input {
+  font-family: 'Special Elite', cursive;
+  background-color: rgba(242, 243, 242, 0.658);
+  padding: 6px;
+  margin: 8px;
+  border-radius: 4px;
+} 
+
+.song-input {
+  width: 430px;
+}
+
+.abbrev-input {
+  width: 150px;
+  margin-left: 3vw;
+}
+
+.save-song-button {
+  font-family: 'Special Elite', cursive;
+  background-color: rgba(229, 231, 176, 0.781);
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: 2px solid rgba(168, 170, 104, 0.5);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ------------------------------------------ */
+/* -------- Generated setlists page --------- */
+/* ------------------------------------------ */
+
 
 .generate-songs-text-header {
   font-size: 12px;
 }
 
+.x {
+  width: 1.5vw;
+  opacity: 0.5;
+}
+
 .rando-lists-page {
   text-decoration: bold;
-    height: 100vh;
-    background: linear-gradient(
-  rgb(236, 230, 220),
-  rgb(119, 117, 113)
-  );
-    margin: 0;
+  height: 100vh;
+  background-color:rgba(153, 170, 170, 0.733);
+  margin: 0;
     padding: 0;
   }
 
- 
-.two-rando-sets {
-  display: grid;
-  grid-template-columns:  1fr 2fr 2fr 1fr 2fr 2fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  ". set-one remove-button . set-two remove-button-2 .";
-  /* padding-left: 13vw; */
-}
+  
+  .two-rando-sets {
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-gap: 6em;
+    padding-left: 12vw;
+  }
+
 
 .set-one-title, .set-two-title {
   font-family: 'Special Elite', cursive;
-  padding-top: 6vh;
+  padding-top: 2vh;
   padding-bottom: 2vh;
 }
 
 .set-one {
-  grid-area: set-one;
+  
+ 
 }
 
 .set-two {
-  grid-area: set-two;
+  
+  
 }
 
-.remove-button {
-  grid-area: remove-button;
-}
-
-.remove-button-2 {
-  grid-area: remove-button-2;
-}
 

@@ -2,6 +2,7 @@ import React from 'react';
 import OneSongBox from './OneSongBox';
 import EditSongForm from './EditSongForm';
 import SongCreateForm from './SongCreateForm';
+import Segno from '../assets/segno.png';
 
 export default class SongsMasterList extends React.Component {
   constructor(props) {
@@ -53,13 +54,15 @@ export default class SongsMasterList extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3 className="master-songlist">Master Songlist</h3>
+      <div className="masterlist-and-add-a-song">
+        <img className="segno-image" src={Segno} alt ="home button"/>
+        <h3 className="master-songlist">Master Songlist Library</h3>
+        <h4 className="master-songlist-subtitle">Scroll to view, edit and delete songs below...</h4>
         <div className="all-songs-map">
         {this.props.songs.map((song) => (
           // the line below doesn't really add functionality, the key
           // is required by react and the className is just for styling
-          <div key={song.id} className="all-songs-box">
+          <div key={song.id} className="all-songs-one-box">
             {this.state.isEdit === song.id
               ?
               <EditSongForm
