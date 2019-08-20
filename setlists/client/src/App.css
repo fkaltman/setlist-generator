@@ -287,38 +287,44 @@ edit form to be inline */
 /* -------- Generated setlists page --------- */
 /* ------------------------------------------ */
 
-
-.generate-songs-text-header {
-  font-size: 12px;
-}
-
-.x {
-  width: 1.5vw;
-  opacity: 0.5;
-}
-
 .rando-lists-page {
   text-decoration: bold;
   height: 100vh;
   background-color:rgba(153, 170, 170, 0.733);
   margin: 0;
-    padding: 0;
+  padding: 0;
   }
-
-  
-  .two-rando-sets {
-    display: grid;
-    grid-template-columns: 2fr 2fr ;
-    grid-gap: 6em;
-    padding-left: 17vw;
-  }
-
 
 .set-one-title, .set-two-title {
   font-family: 'Special Elite', cursive;
+  font-size: 30px;
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
+
+.songs-and-times {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+/* .set-songs {
+  font-size: 20px;
+} */
+
+.x {
+  width: 1.5vw;
+  opacity: 0.5;
+}
+ 
+.two-rando-sets {
+   display: grid;
+   grid-template-columns: 2fr 2fr ;
+   grid-gap: 6em;
+   padding-left: 13vw;
+}
+
+
 
 .set-one {
   

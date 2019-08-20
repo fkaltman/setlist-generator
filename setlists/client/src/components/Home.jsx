@@ -19,7 +19,6 @@ export default function Home() {
         </Link>
       </div>
       <div className="typewriter"><img src={Typewriter} alt="typewriter" /></div>
-    
 </div>
   )
 }
