@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const baseURL = "http://localhost:3000/"
+// const baseURL = "https://protected-brook-40653.herokuapp.com/"
 
 
 // ------------------setlist api calls----------------------- //
@@ -68,6 +69,12 @@ export const editSong = async (id, updateSong) => {
 // ------------------random song & list api calls----------------------- //
 
 export const getRandomSong = async () => {
-  const response = await axios.get(`${baseURL}randomSongs`)
+  const response = await axios.get(`${baseURL}randomSongLists`)
   return response.data
 };
+
+export const getOneRandomSong = async () => {
+  const response = await axios.get(`${baseURL}randomSong`)
+  return response.data
+}
+

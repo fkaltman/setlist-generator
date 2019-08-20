@@ -55,7 +55,7 @@ export default class SongsMasterList extends React.Component {
   render() {
     return (
       <div className="masterlist-and-add-a-song">
-        <img className="segno-image" src={Segno} alt ="home button"/>
+        <img className="segno-image" src={Segno} alt="home button" onClick={this.props.segnoHandleSubmit}/>
         <h3 className="master-songlist">Master Songlist Library</h3>
         <h4 className="master-songlist-subtitle">Scroll to view, edit and delete songs below...</h4>
         <div className="all-songs-map">

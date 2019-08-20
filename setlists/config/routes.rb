@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/randomSongs', to: 'songs#random_songs_list'
+  # Below is a route for GET requests to the /randomSongs endpoint
+  # whici directs the request to the song controller and the random
+  # songs list method
+  # api call to method in the controller
+  get '/randomSongLists', to: 'songs#random_songs_list'
+  get '/randomSong', to: 'songs#random_songs'
   resources :setlists do
     resources :songs
   end

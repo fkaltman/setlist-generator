@@ -50,6 +50,12 @@ class SongsController < ApplicationController
     render json: { set1: @randomSongs1, set2: @randomSongs2}
   end
   
+  def random_songs
+    @allSongs = Song.all
+    randomIndex = rand(0...@allSongs.length)
+    render json: @allSongs[randomIndex]
+  end
+  
   private
   
   def make_random_list 
@@ -59,7 +65,6 @@ class SongsController < ApplicationController
       randomList << @allSongs[randomIndex]
       @allSongs = @allSongs - [@allSongs[randomIndex]]
     end
-    p randomList
     randomList
   end
 

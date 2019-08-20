@@ -6,11 +6,11 @@ import SongsMasterList from './components/SongsMasterList';
 import SongCreateForm from './components/SongCreateForm';
 import SetlistArchives from './components/SetlistArchives';
 import GenerateSetlist from './components/GenerateSetlist';
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, withRouter } from "react-router-dom";
 
 
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -46,6 +46,10 @@ export default class App extends React.Component {
     })
   }
 
+  segnoHandleSubmit = () => {
+    this.props.history.push("/")
+  }
+
   songUpdateHandleSubmit = async (songData) => {
     const { id, ...data } = songData;
     const updateSong = await editSong(id, data)
@@ -57,12 +61,21 @@ export default class App extends React.Component {
   removeSong = async (id) => {
     await deleteSong(id);
     this.setState((prevState) => ({
-      // Below filters through the songss array and compairs if the one
+      // Below filters through the songs array and compairs if the one
       // it is given is equal to all of the ids in the array
+      // AND sets it in state
       songs: prevState.songs.filter(song => id !== song.id)
     }))
   }
-
+  
+  removeGeneratedSong = async (id) => {
+    this.setState((prevState) => ({
+      // Below filters through the songs array and compairs if the one
+      // it is given is equal to all of the ids in the array
+      // AND sets it in state
+      songs: prevState.songs.filter(song => id !== song.id)
+    }))
+  }
 
   // Identical to the other handleChange
   handleChange = (e) => {
@@ -101,7 +114,10 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/generate-setlist' render={() => (
-            <GenerateSetlist formData={this.state.formData} />)} />
+            <GenerateSetlist
+              formData={this.state.formData}
+              segnoHandleSubmit={this.segnoHandleSubmit}
+            />)} />
           {/* <Route path='/setlist-archives' component={SetlistArchives} /> */}
           <Route path='/songs-masterlist' render={() => (
             <SongsMasterList
@@ -115,11 +131,14 @@ export default class App extends React.Component {
               // Below is passing updateSong to SongsMasterList
               setFormData={this.setFormData}
               songUpdateHandleSubmit={this.songUpdateHandleSubmit}
+              segnoHandleSubmit={this.segnoHandleSubmit}
             />)} />
         </Switch>
       </div>
     )
   }
 }
+
+export default withRouter(App);
 
 

@@ -6,48 +6,48 @@
   min-height: 100vh;
   background: linear-gradient(
 rgb(236, 213, 144),
-rgb(119, 117, 113)
+rgb(177, 172, 161)
 );
   margin: 0;
   padding: 0;
 }
 
 .typewriter {
-  width: 140vw;
-  /* padding-bottom: 60px; */
-  opacity: .8;
+  /* Below line fixes the image 
+  so the links can sit on top of it */
+  /* /* position: relative; */
+  position:fixed;
+  bottom:0;
+  right:0;
+  padding-top: -20px;
+  opacity: 0.8;
 }
 
-/* 
-.big-title {
-  text-align: center;
-  margin: 0;
-  padding-top: 10vh;
-  font-family: 'Special Elite', cursive;
-  font-size: 24px;
-}  */
+
+.typewriter img {
+  width: 90vw;
+  margin-left: 10px;
+  z-index: 1;
+}
 
 /* -------Typewritter title animation below----------- */
 /* ------------inspired by a codepen from------------- */
 /* ----------------Thiago Teles Pereira--------------- */
 
+
 html {
-  /* padding: 0;
-  margin: 0; */
   height: 100vh;
   min-height: 100%;
   overflow: hidden;
 }
 
 body {
-  height: calc(100vh - 8em);
+  /* height: calc(100vh - 8em); */
 }
 
 .line-1 {
     padding-top: 20vh;
     font-family: 'Special Elite', cursive;
-    /* position: relative; */
-    /* top: 50%;   */
     width: 24em;
     padding-top: 20vh;
     margin: 0 auto;
@@ -81,30 +81,21 @@ body {
 /* ---------------------------------------- */
 
 
-.home-buttons {
-  margin-top: 6vh;
-  padding-bottom: 10px;
-  text-align: center;
+.home-links {
+  /* Below line places the links on top 
+  of the typewriter */
+  position: absolute;
+  top: 67vh;
+  padding-left: 6vw;
+  z-index: 2;
 }
 
-.home-generate-a-list-button { 
+.home-generate-a-list-button, .home-go-to-archives-button, .home-go-songs-masterlist-button {
   font-family: 'Special Elite', cursive;
-  width: 200px;
-  height: 40px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: rgba(130, 198, 238, 0.37);
-}
-
-.home-go-to-archives-button, .home-go-songs-masterlist-button {
-  font-family: 'Special Elite', cursive;
-  width: 130px;
-  height: 34px;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: rgba(152, 170, 111, 0.616);
+  color: rgb(71, 71, 71);
+  font-size: 20px;
+  padding: 20px 10px 10px 60px;
+  margin-left: 50vw;
 }
 
 /* ---------------------------------------- */
@@ -319,7 +310,7 @@ edit form to be inline */
     display: grid;
     grid-template-columns: 2fr 2fr ;
     grid-gap: 6em;
-    padding-left: 12vw;
+    padding-left: 17vw;
   }
 
 
