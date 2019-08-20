@@ -231,15 +231,6 @@ edit form to be inline */
   border-radius: 4px;
 }
 
-/* -------------------------------- */
-/* -------- Add a song form-------- */
-/* -------------------------------- */
-
-
-/* .add-song-form {
-  margin-bottom: 400px;
-} */
-
 /* --------------------------------------------- */
 /* ----- Input & buttons for adding a song ----- */
 /* --------------------------------------------- */
@@ -290,7 +281,7 @@ edit form to be inline */
 .rando-lists-page {
   text-decoration: bold;
   height: 100vh;
-  background-color:rgba(153, 170, 170, 0.733);
+  background-color:rgba(153, 170, 170, 0.7);
   margin: 0;
   padding: 0;
   }
@@ -298,42 +289,44 @@ edit form to be inline */
 .set-one-title, .set-two-title {
   font-family: 'Special Elite', cursive;
   font-size: 30px;
-  padding-top: 2vh;
+  padding-top: 1vh;
   padding-bottom: 2vh;
 }
 
 .songs-and-times {
-  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 1fr 1fr;
+  font-size: 24px;
   font-weight: bold;
-  line-height: 140%;
+  line-height: 180%;
 }
 
-/* .set-songs {
-  font-size: 20px;
-} */
-
 .x {
-  width: 1.5vw;
-  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+  padding-top: 12px;
+  padding-left: 10px;
+  opacity: 0.3;
 }
  
 .two-rando-sets {
    display: grid;
    grid-template-columns: 2fr 2fr ;
-   grid-gap: 6em;
-   padding-left: 13vw;
+   grid-gap: 10em;
+   padding-left: 7vw;
+   padding-right: 4vw;
 }
 
 
-
-.set-one {
-  
- 
+.add-random-song {
+  text-align: left;
+  font-size: 24px;
+  color: rgb(236, 226, 214);
+  margin-top: 20px;
+  width: 70px;
+  background-color:rgb(8, 8, 8);
+  border: 2px solid rgb(163, 165, 124);
+  border-radius: 3px;
 }
-
-.set-two {
-  
-  
-}
-
-

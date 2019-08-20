@@ -8,59 +8,46 @@ export default class GenerateSetlist extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      tempSetlist: null,
-      newTempSong1: "",
-      newTempSong2: ""
+      setOne: [],
+      setTwo: []
     }
   }
 
   componentDidMount = async () => {
     this.getRandos()
-
   }
 
   getOneSong1 = async () => {
     let newSong = await getOneRandomSong()
     this.setState(prevState => ({
-      // newTempSong is from state and newSong is from the line above
-      newTempSong1: newSong
+      setOne: [...prevState.setOne, newSong]
     }))
-  }
-
-  deleteOneSong1 = (ev) => {
-    ev.preventDefault();
-    this.setState({
-      // newTempSong is from state and newSong is from the line above
-      newTempSong1: ""
-    })
   }
 
   getOneSong2 = async () => {
     let newSong = await getOneRandomSong()
-    this.setState({
-      // newTempSong is from state and newSong is from the line above
-      newTempSong2: newSong
-    })
+    this.setState(prevState => ({
+      setTwo: [...prevState.setTwo, newSong]
+    }))
   }
 
   getRandos = async () => {
     const randomList = await getRandomSong();
     this.setState({
-      tempSetlist: randomList
+      setOne: randomList.set1,
+      setTwo: randomList.set2
     })
-    console.log(randomList)
   }
 
-
-  removeGeneratedSong = async (id, setlist) => {
+  removeGeneratedSong1 = async (id) => {
     this.setState((prevState) => ({
-      // Below filters through the songs array and compairs if the one
-      // that is given is equal to all of the ids in the array
-      // AND sets it in state
-      tempSetlist: {
-        ...prevState.tempSetlist,
-        [setlist]: prevState.tempSetlist[setlist].filter(song => id !== song.id)
-      }
+      setOne: [...prevState.setOne.filter(song => id !== song.id)]
+    }))
+  }
+
+  removeGeneratedSong2 = async (id) => {
+    this.setState((prevState) => ({
+      setTwo: [...prevState.setTwo.filter(song => id !== song.id)]
     }))
   }
 
@@ -69,48 +56,54 @@ export default class GenerateSetlist extends Component {
       <div className="rando-lists-page">
         <img className="segno-image" src={Segno} alt="home button" onClick={this.props.segnoHandleSubmit} />
         <div className="two-rando-sets">
-          {this.state.tempSetlist && (
+          {this.state.setOne && (
             <>
               <div className="set-one">
-                <h1 className="set-one-title">Set 1:</h1>
-                {/* class below will most likely be removed - superflouos */}
-                <div className="set-songs">
-                  {this.state.tempSetlist.set1.map(song =>
-                    <div className="info" key={song.id}>
-                      <div className="songs-and-times">{song.abbreviation}  {song.length} <img className="x" src={X} alt="remove" onClick={() => { this.removeGeneratedSong(song.id, "set1") }} /> </div>
+                <h1 className="set-one-title">Set 1:</h1><hr />
+                {this.state.setOne.map(song =>
+                  <div className="info" key={song.id}>
+                    <div className="songs-and-times">
+                      <div className="s-abbrev">{song.abbreviation}
+                      </div>
+                      <div className="s-length"> {song.length}
+                      </ div>
+                      <img className="x" src={X} alt="remove" onClick={() => {
+                        this.removeGeneratedSong1(song.id)
+                      }} />
                     </div>
-                  )}
-                </div>
-                {this.state.newTempSong1 &&
-                  <div className="songs-and-times">
-                    {this.state.newTempSong1.abbreviation} {this.state.newTempSong1.length}
-                    {this.state.newTempSong1 &&
-                      <img className="x" src={X} alt="remove" onClick={this.deleteOneSong1} />}
-                  </div>}
+                  </div>
+                )}
+                <p>{Math.ceil(this.state.setOne.reduce((sum, song) => sum + song.length, 0))}</p>
+                <button className="add-random-song" onClick={() => {
+                  this.getOneSong1()
+                }}>Add a song</button>
 
-                <button className="add-random-song" onClick={() => { this.getOneSong1() }}>Add a song to this set</button>
               </div>
               <div className="set-two">
-                <h1 className="set-two-title">Set 2:</h1>
+                <h1 className="set-two-title">Set 2:</h1><hr />
                 <div className="set-songs">
-                  {this.state.tempSetlist.set2.map(song =>
-                    <div className="info2" key={song.id}>
-                      <div className="songs-and-times">{song.abbreviation}  {song.length} <img className="x" src={X} alt="remove" onClick={() => { this.removeGeneratedSong(song.id, "set2") }} />
+                  {this.state.setTwo.map(song =>
+                    <div className="info" key={song.id}>
+                      <div className="songs-and-times">
+                        <div className="s-abbrev">{song.abbreviation}
+                        </div>
+                        <div className="s-length"> {song.length}
+                        </div>
+                        <img className="x" src={X} alt="remove" onClick={() => {
+                          this.removeGeneratedSong2(song.id)
+                        }} />
                       </div>
                     </div>
                   )}
-                  {this.state.newTempSong2 &&
-                    <div className="songs-and-times">
-                      {this.state.newTempSong2.abbreviation} {this.state.newTempSong2.length}
-                    </div>}
                 </div>
-                <button className="add-random-song" onClick={() => { this.getOneSong2() }}>Add a song to this set</button>
+                <p>{Math.ceil(this.state.setTwo.reduce((sum, song) => sum + song.length, 0))}</p>
+                <button className="add-random-song" onClick={() => {
+                  this.getOneSong2()
+                }}>+<br />song</button>
               </div>
             </>
           )}
         </div>
-        {/* <button className="add-a-song-to-the-list-button" onClick={this.getRandos}> Get a different random list </button> */}
-
       </div>
     )
   }
