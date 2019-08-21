@@ -73,10 +73,10 @@ export default class GenerateSetlist extends Component {
                     </div>
                   </div>
                 )}
-                <p>{Math.ceil(this.state.setOne.reduce((sum, song) => sum + song.length, 0))}</p>
+                <p>Total <br />{Math.ceil(this.state.setOne.reduce((sum, song) => sum + song.length, 0))} minutes</p>
                 <button className="add-random-song" onClick={() => {
                   this.getOneSong1()
-                }}>Add a song</button>
+                }}>ADD A SONG</button>
 
               </div>
               <div className="set-two">
@@ -96,10 +96,10 @@ export default class GenerateSetlist extends Component {
                     </div>
                   )}
                 </div>
-                <p>{Math.ceil(this.state.setTwo.reduce((sum, song) => sum + song.length, 0))}</p>
+                <p>Total <br />{Math.ceil(this.state.setTwo.reduce((sum, song) => sum + song.length, 0))} minutes</p>
                 <button className="add-random-song" onClick={() => {
                   this.getOneSong2()
-                }}>+<br />song</button>
+                }}>ADD A SONG</button>
               </div>
             </>
           )}

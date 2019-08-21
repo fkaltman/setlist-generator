@@ -41,15 +41,10 @@ html {
   overflow: hidden;
 }
 
-body {
-  /* height: calc(100vh - 8em); */
-}
-
 .line-1 {
     padding-top: 20vh;
     font-family: 'Special Elite', cursive;
     width: 24em;
-    padding-top: 20vh;
     margin: 0 auto;
     /* border-right: 2px solid rgba(255,255,255,.75); */
     font-size: 180%;
@@ -88,6 +83,7 @@ body {
   top: 67vh;
   padding-left: 6vw;
   z-index: 2;
+  border: none;
 }
 
 .home-generate-a-list-button, .home-go-to-archives-button, .home-go-songs-masterlist-button {
@@ -96,6 +92,8 @@ body {
   font-size: 20px;
   padding: 20px 10px 10px 60px;
   margin-left: 50vw;
+  border: none;
+  background: none;
 }
 
 /* ---------------------------------------- */
@@ -249,7 +247,7 @@ edit form to be inline */
 
 .song-input, .abbrev-input, .length-input {
   font-family: 'Special Elite', cursive;
-  background-color: rgba(242, 243, 242, 0.658);
+  background-color: rgba(242, 243, 242, 0.6);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
@@ -281,24 +279,25 @@ edit form to be inline */
 .rando-lists-page {
   text-decoration: bold;
   height: 100vh;
-  background-color:rgba(153, 170, 170, 0.7);
+  background-color: rgb(199, 196, 183);
   margin: 0;
   padding: 0;
   }
 
 .set-one-title, .set-two-title {
   font-family: 'Special Elite', cursive;
+  text-align: center;
   font-size: 30px;
-  padding-top: 1vh;
-  padding-bottom: 2vh;
+  padding-top: .5vh;
+  padding-bottom: .5vh;
 }
 
 .songs-and-times {
   display: flex;
   flex-direction: row;
   display: grid;
-  grid-template-columns: 3fr 1.5fr 1fr 1fr;
-  font-size: 24px;
+  grid-template-columns: 3fr 1.5fr .5fr .5fr;
+  font-size: 22px;
   font-weight: bold;
   line-height: 180%;
 }
@@ -314,19 +313,72 @@ edit form to be inline */
 .two-rando-sets {
    display: grid;
    grid-template-columns: 2fr 2fr ;
-   grid-gap: 10em;
+   grid-gap: 8em;
    padding-left: 7vw;
    padding-right: 4vw;
 }
 
 
 .add-random-song {
-  text-align: left;
-  font-size: 24px;
+  text-align: center;
+  font-size: 18px;
   color: rgb(236, 226, 214);
   margin-top: 20px;
-  width: 70px;
-  background-color:rgb(8, 8, 8);
+  width: 22vw;
+  height: 4vh;
+  background-color:rgb(152, 161, 152);
   border: 2px solid rgb(163, 165, 124);
   border-radius: 3px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 4vh;
+  margin-left: 3vw;
+} 
+
+p {
+  margin-top: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(114, 99, 99);
 }
+
+@media only screen 
+  and (min-width: 1100px){
+
+    .segno-image {
+      width: 1.5vw;
+      padding: 2.5vw;
+      opacity: 0.7;
+    }
+
+    /* .typewriter {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding-top: -20px;
+      opacity: 0.8;
+    }
+    
+    .typewriter img {
+      width: 90vw;
+      margin-left: 10px;
+      z-index: 1;
+    } */
+
+    .line-1 {
+      padding-top: 20vh;
+      padding-left: 8vw;
+      margin: 0;   
+  }
+
+
+  .home-links {
+    top: 37vh;
+    padding-left: 6vw;
+    z-index: 2;
+    border: none;
+  }
+  
+  
+  
+  }
