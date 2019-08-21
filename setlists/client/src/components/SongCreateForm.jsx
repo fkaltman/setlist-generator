@@ -33,11 +33,11 @@ export default class SongCreateForm extends React.Component {
       <div className="add-song-form">
         <h2 className="add-song-header">Add a song to the database...</h2>
         <div className="new-song-inputs">
-          <form onSubmit={(e) => {
+          <form onSubmit={async (e) => {
             e.preventDefault()
             // songCreateHandleSubmit is being passed down from App.js
             // and we are giving it the form data
-            this.props.songCreateHandleSubmit(this.state.formData)
+            await this.props.songCreateHandleSubmit(this.state.formData)
           }}>
             <input className="song-input"
               type="text"

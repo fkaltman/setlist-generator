@@ -67,7 +67,7 @@ class App extends React.Component {
       songs: prevState.songs.filter(song => id !== song.id)
     }))
   }
-  
+
   removeGeneratedSong = async (id) => {
     this.setState((prevState) => ({
       // Below filters through the songs array and compairs if the one
@@ -132,6 +132,7 @@ class App extends React.Component {
               setFormData={this.setFormData}
               songUpdateHandleSubmit={this.songUpdateHandleSubmit}
               segnoHandleSubmit={this.segnoHandleSubmit}
+              songCreateHandleSubmit={this.songCreateHandleSubmit}
             />)} />
         </Switch>
       </div>

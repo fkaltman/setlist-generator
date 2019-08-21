@@ -137,7 +137,7 @@ html {
   font-size: 16px;
   margin-top: 2vh;
   /*  next two lines make the wee scrollable box */
-  height: 670px;
+  height: 600px;
   overflow: scroll;
 }
 
@@ -288,7 +288,6 @@ edit form to be inline */
   font-family: 'Special Elite', cursive;
   text-align: center;
   font-size: 30px;
-  padding-top: .5vh;
   padding-bottom: .5vh;
 }
 

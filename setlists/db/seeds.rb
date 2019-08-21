@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Song.delete_all
 
 Song.create(name: '420', abbreviation: '420', length: 4.4)
 Song.create(name: '1759', abbreviation: '1759', length: 9.7)
