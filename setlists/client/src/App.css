@@ -372,23 +372,22 @@ and (max-width: 580px) {
   /* MQ for master setlist @ smaller screens */
 
   .master-songlist {
-    font-size: 22px;
+    font-size: 20px;
   }
   
   .master-songlist-subtitle {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .all-songs-map {
     font-size: 14px;
-    margin-top: 2vh;
     /*  Below adjusts size of the scrollable box */
-    height: 500px;
+    height: 464px;
   }
   
   .all-songs-one-box {
     width: 80vw;
-    height: 46px;
+    height: 42px;
     margin: 9px auto;
   }
   
@@ -443,9 +442,9 @@ and (max-width: 580px) {
   /* MQ - Input & buttons for adding a song  */
   
   .add-song-header {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
   } 
   
   .new-song-inputs {
@@ -478,6 +477,17 @@ and (max-width: 580px) {
     margin: 8px 0 0 5vw;
     font-size: 13px;
   }
+
+  .home-generate-a-list-button, .home-go-to-archives-button, .home-go-songs-masterlist-button {
+    font-size: 17px;
+}
+
+.line-1 {
+  padding-top: 30vh;
+  padding-left: 20vw;
+  margin: 0; 
+  font-size: 24px;  
+}
   
 }
 
@@ -509,7 +519,7 @@ and (max-width: 580px) {
   .line-1 {
      padding-top: 20vh;
      padding-left: 8vw;
-    margin: 0;   
+     margin: 0;   
    }
 
   .home-links {
@@ -518,4 +528,5 @@ and (max-width: 580px) {
     z-index: 2;
     border: none;
   }  
-  }
+  
+}
