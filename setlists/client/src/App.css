@@ -15,7 +15,6 @@ rgb(177, 172, 161)
 .typewriter {
   /* Below line fixes the image 
   so the links can sit on top of it */
-  /* /* position: relative; */
   position:fixed;
   bottom:0;
   right:0;
@@ -46,8 +45,6 @@ html {
     font-family: 'Special Elite', cursive;
     width: 24em;
     margin: 0 auto;
-    /* border-right: 2px solid rgba(255,255,255,.75); */
-    font-size: 180%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -65,7 +62,6 @@ html {
   to{width: 11em;}
 }
 
-/* Why do i need this line? */
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
@@ -80,8 +76,8 @@ html {
   /* Below line places the links on top 
   of the typewriter */
   position: absolute;
-  top: 67vh;
-  padding-left: 6vw;
+  top: 61vh;
+  padding-right:5vw;
   z-index: 2;
   border: none;
 }
@@ -91,7 +87,7 @@ html {
   color: rgb(71, 71, 71);
   font-size: 20px;
   padding: 20px 10px 10px 60px;
-  margin-left: 50vw;
+  margin-left: 36vw;
   border: none;
   background: none;
 }
@@ -247,7 +243,6 @@ edit form to be inline */
 
 .song-input, .abbrev-input, .length-input {
   font-family: 'Special Elite', cursive;
-  background-color: rgba(242, 243, 242, 0.6);
   padding: 6px;
   margin: 8px;
   border-radius: 4px;
@@ -267,7 +262,7 @@ edit form to be inline */
   background-color: rgba(229, 231, 176, 0.781);
   padding: 6px 20px;
   margin: 8px 0;
-  border: 2px solid rgba(168, 170, 104, 0.5);
+  border: 2px solid rgba(209, 142, 122, 0.3);
   border-radius: 4px;
   font-size: 14px;
 }
@@ -317,7 +312,6 @@ edit form to be inline */
    padding-right: 4vw;
 }
 
-
 .add-random-song {
   text-align: center;
   font-size: 18px;
@@ -340,6 +334,154 @@ p {
   font-weight: bold;
   color: rgb(114, 99, 99);
 }
+
+/* MQ for mobile screens */
+
+@media only screen
+and (max-width: 580px) {
+  .set-one-title, .set-two-title {
+    font-size: 18px;
+  }
+  
+  .songs-and-times {
+    font-size: 14px;
+  }
+  
+  .x {
+    width: 12px;
+    height: 12px;
+    padding-top: 7px;
+    opacity: 0.4;
+  }
+   
+  .two-rando-sets {
+     grid-gap: 3em;
+  }
+  
+  .add-random-song {
+    font-size: 14px;
+    width: 22vw;
+    height: 6vh;
+    bottom: 6vh;
+  } 
+  
+  p {
+    font-size: 18px;
+  }
+
+  /* MQ for master setlist @ smaller screens */
+
+  .master-songlist {
+    font-size: 22px;
+  }
+  
+  .master-songlist-subtitle {
+    font-size: 12px;
+  }
+  
+  .all-songs-map {
+    font-size: 14px;
+    margin-top: 2vh;
+    /*  Below adjusts size of the scrollable box */
+    height: 500px;
+  }
+  
+  .all-songs-one-box {
+    width: 80vw;
+    height: 46px;
+    margin: 9px auto;
+  }
+  
+  .song-text {
+    padding-left: 6px;
+  }
+    
+  /* MQ - Buttons for editing/deleting one song */
+  
+  .song-delete-button {
+    font-size: 9px;
+    height: 26px;
+    width: 36px;
+    margin: 9px 0 0 6px;
+    padding-left: 2px;
+  }
+  
+  .song-edit-button {
+    font-size: 9px;
+    height: 26px;
+    width: 30px;
+    margin: 9px 0 0 6px;
+    padding-left: 4px;
+  }
+  
+  /* below line corrected the 
+  edit form to be inline */
+  
+  .edit-song-input {
+    width: 30vw;
+    margin-left: 1vw;
+  }
+  
+  .edit-abbrev-input {
+    width: 15vw;
+    margin-left: .5vw;
+  }
+  
+  .edit-length-input {
+    width: 5vw;
+    margin-left: .5vw;
+  }
+  
+  .edit-save-song-button {
+    padding-left: 2vw;
+    /* margin: 8px 0; */
+    width: 10vw;
+    border: 2ps solid grey;
+  }
+  
+  
+  /* MQ - Input & buttons for adding a song  */
+  
+  .add-song-header {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5vh;
+  } 
+  
+  .new-song-inputs {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .song-input, .abbrev-input, .length-input {
+    padding: 6px;
+    margin: 8px;
+  } 
+  
+  .song-input {
+    width: 330px;
+    margin-left: 2vw;
+  }
+  
+  .abbrev-input {
+    width: 100px;
+    margin-left: 4vw;
+  }
+
+  .length-input {
+    width: 70px;
+    margin-left: 3vw;
+  }
+  
+  .save-song-button {
+    padding: .6vh 2vw;
+    margin: 8px 0 0 5vw;
+    font-size: 13px;
+  }
+  
+}
+
+/* MQ for larger screens */
 
 @media only screen 
   and (min-width: 1100px){
@@ -364,20 +506,16 @@ p {
       z-index: 1;
     } */
 
-    .line-1 {
-      padding-top: 20vh;
-      padding-left: 8vw;
-      margin: 0;   
-  }
-
+  .line-1 {
+     padding-top: 20vh;
+     padding-left: 8vw;
+    margin: 0;   
+   }
 
   .home-links {
     top: 37vh;
     padding-left: 6vw;
     z-index: 2;
     border: none;
-  }
-  
-  
-  
+  }  
   }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseURL = "http://localhost:3000/"
-// const baseURL = "https://floating-cove-34332.herokuapp.com/"
+// const baseURL = "http://localhost:3000/"
+const baseURL = "https://floating-cove-34332.herokuapp.com/"
 
 
 // ------------------setlist api calls----------------------- //
