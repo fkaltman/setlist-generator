@@ -40,7 +40,8 @@ html {
 }
 
 .line-1 {
-    padding-top: 20vh;
+    font-size: 30px;
+    padding-top: 30vh;
     font-family: 'Special Elite', cursive;
     width: 24em;
     margin: 0 auto;
@@ -85,8 +86,8 @@ html {
   font-family: 'Special Elite', cursive;
   color: rgb(71, 71, 71);
   font-size: 20px;
-  padding: 20px 10px 10px 60px;
-  margin-left: 36vw;
+  padding:  2vh 2vh 2vh 2vh;
+  margin-left: 46vw;
   border: none;
   background: none;
 }
@@ -487,37 +488,27 @@ and (max-width: 580px) {
   margin: 0; 
   font-size: 24px;  
 }
-  
 }
 
 /* MQ for larger screens */
 
 @media only screen 
-  and (min-width: 1100px){
+  and (min-width: 850px){
 
     .segno-image {
       width: 1.5vw;
       padding: 2.5vw;
       opacity: 0.7;
     }
-
-    /* .typewriter {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      padding-top: -20px;
-      opacity: 0.8;
-    }
     
     .typewriter img {
       width: 90vw;
       margin-left: 10px;
-      z-index: 1;
-    } */
+    } 
 
   .line-1 {
      padding-top: 20vh;
-     padding-left: 8vw;
+     padding-left: 6vw;
      margin: 0;   
    }
 
