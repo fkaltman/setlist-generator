@@ -32,10 +32,8 @@ Created with [React](https://reactjs.org/), [Ruby on Rails](https://rubyonrails.
 * User can rearrange the order of the songlist.
 
 
-## Wire Frames
-
-<img src="assets/setlist_generator_pg1.png" alt="homescreen" width="300"/> 
-<img src="assets/setlist_generator_pg2.png" alt="generated lists" width="300"/> 
-<img src="assets/setlist_generator_pg1.png" alt="masterlist" width="300"/> 
+<img src="assets/setlist_generator_pg1.png" alt="homescreen" width="250"/> 
+<img src="assets/setlist_generator_pg2.png" alt="generated lists" width="250"/> 
+<img src="assets/setlist_generator_pg3.png" alt="masterlist" width="250"/> 
 
 
