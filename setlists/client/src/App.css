@@ -519,6 +519,7 @@ and (max-width: 580px) {
     border: none;
   }  
 
+  /* MQ - Random list page @ large screen */
   
   .set-one-title, .set-two-title {
     font-size: 24px;
@@ -552,5 +553,21 @@ and (max-width: 580px) {
   p {
     font-size: 18px;
   }
+
+  /* MQ - Master list page @ large screen */
+
+  .all-songs-map {
+    font-size: 14px;
+    /*  Below adjusts size of the scrollable box */
+    height: 422px;
+  }
+
+  .all-songs-one-box {
+    width: 700px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
   
 }

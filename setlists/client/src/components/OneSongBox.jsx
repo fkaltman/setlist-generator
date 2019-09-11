@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2';
 
 export default function OneSongBox(props) {
   return (
@@ -13,7 +14,20 @@ export default function OneSongBox(props) {
       }}>Edit</button></div>
       {/* Delete Songs button */}
       <div><button className="song-delete-button" onClick={() => {
-        props.removeSong(props.song.id)
+        // Delete warning modal from SweetAlert2 below
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to reverse this!",
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#81b878',
+          cancelButtonColor: '#eabfbf',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.value) {
+            props.removeSong(props.song.id)
+          }
+        })
       }}>Delete</button></div>
     </>
   )

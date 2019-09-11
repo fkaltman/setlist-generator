@@ -7,8 +7,7 @@ import SongCreateForm from './components/SongCreateForm';
 import SetlistArchives from './components/SetlistArchives';
 import GenerateSetlist from './components/GenerateSetlist';
 import { Route, Link, Switch, withRouter } from "react-router-dom";
-
-
+import Swal from 'sweetalert2';
 
 class App extends React.Component {
   constructor(props) {

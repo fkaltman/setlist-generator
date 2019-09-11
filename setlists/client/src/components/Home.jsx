@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from '../assets/typewriter_nw_700.png';
+import Swal from 'sweetalert2';
 
 
 export default function Home() {
