@@ -480,14 +480,14 @@ and (max-width: 580px) {
 
   .home-generate-a-list-button, .home-go-to-archives-button, .home-go-songs-masterlist-button {
     font-size: 17px;
-}
+  }
 
-.line-1 {
-  padding-top: 30vh;
-  padding-left: 20vw;
-  margin: 0; 
-  font-size: 24px;  
-}
+  .line-1 {
+   padding-top: 30vh;
+   padding-left: 20vw;
+   margin: 0; 
+   font-size: 24px;  
+  }
 }
 
 /* MQ for larger screens */
@@ -495,16 +495,16 @@ and (max-width: 580px) {
 @media only screen 
   and (min-width: 850px){
 
-    .segno-image {
-      width: 1.5vw;
-      padding: 2.5vw;
-      opacity: 0.7;
-    }
+  .segno-image {
+    width: 1.5vw;
+    padding: 2.5vw;
+    opacity: 0.7;
+  }
     
-    .typewriter img {
-      width: 90vw;
-      margin-left: 10px;
-    } 
+  .typewriter img {
+    width: 90vw;
+    margin-left: 10px;
+  } 
 
   .line-1 {
      padding-top: 20vh;
@@ -518,5 +518,39 @@ and (max-width: 580px) {
     z-index: 2;
     border: none;
   }  
+
+  
+  .set-one-title, .set-two-title {
+    font-size: 24px;
+    padding-bottom: 0vh;
+  }
+  
+  .songs-and-times {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 160%;
+  }
+  
+  .x {
+    width: 14px;
+    height: 14px;
+    padding-top: 2px;
+    padding-left: 10px;
+  }
+   
+  .two-rando-sets {
+     grid-gap: 16em;
+     padding-left: 17vw;
+     padding-right: 14vw;
+  }
+  
+  .add-random-song {
+    width: 16vw;
+    bottom: 4vh;
+  } 
+  
+  p {
+    font-size: 18px;
+  }
   
 }
