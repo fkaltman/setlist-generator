@@ -7,7 +7,6 @@ import Segno from '../assets/segno.png';
 export default class SongsMasterList extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       isEdit: null,
       formData: {
@@ -40,7 +39,7 @@ export default class SongsMasterList extends React.Component {
   // Identical to the other handleChange
   handleChange = (e) => {
     // Deconstructs e.target.name & e.target.value
-    // (pulls them out and makes them thier own variables)
+    // (pulls them out and makes them their own variables)
     const { name, value } = e.target
     this.setState((prevState) => ({
       formData: {
