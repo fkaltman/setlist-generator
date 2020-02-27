@@ -1,6 +1,6 @@
 # Setlist Generator
 
-[http://setlist-generator.surge.sh/] (http://setlist-generator.surge.sh/)
+http://setlist-generator.surge.sh/
 
 Setlist Generator is an app designed to simplify the touring musician's tedious chore of producing unique, nightly setlists by randomly generating a list of songs for from a hardcoded, editable masterlist database.  The Setlist Generator will produce a random list and allow the user to eliminate the suggestions that don't work for that set for any reason ranging from musican's personal preference to the demands of a particular geographical location.  
 
