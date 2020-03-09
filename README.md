@@ -23,7 +23,7 @@ In its current state the Setlist Generator is set up with a custom database for 
 
 Created with [React](https://reactjs.org/), [Ruby on Rails](https://rubyonrails.org/), and [PostgreSQL](https://www.postgresql.org/)
 
-
+http://setlist-generator.surge.sh/
 ### Features
 * Users can randomly generate two lists of 15 songs, based on the average of two   sets played a night.
 * Users can delete songs from the list and fetch new ones

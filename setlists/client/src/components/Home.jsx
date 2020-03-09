@@ -10,7 +10,7 @@ export default function Home() {
       <p className="line-1 anim-typewriter">Setlist Generator</p>
       <div className="home-links">
         <Link to='/generate-setlist'>
-          <button className="home-generate-a-list-button" onClick={() => { }}>New Setlist</button></Link>
+          <button className="home-generate-a-list-button" onClick={() => { }}>Create New Setlists</button></Link>
         <br />
         {/* <Link to='/setlist-archives'>
           <button className="home-go-to-archives-button">Setlist Archives</button>
