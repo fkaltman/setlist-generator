@@ -75,8 +75,8 @@ html {
 .home-links {
   /* Below line places the links on top 
   of the typewriter */
-  position: absolute;
-  top: 61vh;
+  position: fixed;
+  bottom: 20vh;
   padding-right:5vw;
   z-index: 2;
   border: none;
@@ -335,7 +335,9 @@ p {
   color: rgb(114, 99, 99);
 }
 
-/* MQ for mobile screens */
+/* --------------------------------- */
+/* ----- MQ for mobile screens ----- */
+/* --------------------------------- */
 
 @media only screen
 and (max-width: 580px) {
@@ -511,13 +513,6 @@ and (max-width: 580px) {
      padding-left: 6vw;
      margin: 0;   
    }
-
-  .home-links {
-    top: 37vh;
-    padding-left: 6vw;
-    z-index: 2;
-    border: none;
-  }  
 
   /* MQ - Random list page @ large screen */
   
