@@ -1,4 +1,4 @@
-# Setlist Generator
+# Setlist Generator 🎵
 
 <img src="assets/setlist_generator_pg1.png" alt="homescreen" width="250" display="inline"/> <img src="assets/setlist_generator_pg2.png" alt="generated lists" width="250" display="inline"/> <img src="assets/setlist_generator_pg3.png" alt="masterlist" width="250" display="inline"/> 
 
