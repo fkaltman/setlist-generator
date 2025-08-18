@@ -40,7 +40,7 @@ html {
 }
 
 .line-1 {
-    font-size: 30px;
+    font-size: 1.8em;
     padding-top: 30vh;
     font-family: 'Special Elite', cursive;
     width: 24em;
@@ -73,11 +73,9 @@ html {
 
 
 .home-links {
-  /* Below line places the links on top 
-  of the typewriter */
   position: fixed;
   bottom: 20vh;
-  padding-right:5vw;
+  padding-right: 5vw;
   z-index: 2;
   border: none;
 }
@@ -85,9 +83,9 @@ html {
 .home-generate-a-list-button, .home-go-to-archives-button, .home-go-songs-masterlist-button {
   font-family: 'Special Elite', cursive;
   color: rgb(71, 71, 71);
-  font-size: 20px;
+  font-size: 1.6em;
   padding:  2vh 2vh 2vh 2vh;
-  margin-left: 46vw;
+  margin-left: 56vw;
   border: none;
   background: none;
 }
@@ -492,7 +490,9 @@ and (max-width: 580px) {
   }
 }
 
-/* MQ for larger screens */
+/* ----------------------------------------- */
+/* ------ MQ for medium/large screens ------ */
+/* ----------------------------------------- */
 
 @media only screen 
   and (min-width: 850px){
@@ -504,9 +504,13 @@ and (max-width: 580px) {
   }
     
   .typewriter img {
-    width: 90vw;
-    margin-left: 10px;
+    width: 80vw;
   } 
+
+  .home-links {
+    bottom: 16vh;
+    left: 8vw;
+  }
 
   .line-1 {
      padding-top: 20vh;
@@ -514,7 +518,7 @@ and (max-width: 580px) {
      margin: 0;   
    }
 
-  /* MQ - Random list page @ large screen */
+  /* MQ - Random list page @ med/large screen */
   
   .set-one-title, .set-two-title {
     font-size: 24px;
@@ -549,7 +553,7 @@ and (max-width: 580px) {
     font-size: 18px;
   }
 
-  /* MQ - Master list page @ large screen */
+  /* MQ - Master list page @ med/large screen */
 
   .all-songs-map {
     font-size: 14px;
@@ -566,3 +570,21 @@ and (max-width: 580px) {
   
   
 }
+
+/* ----------------------------------------- */
+/* ------ MQ for x-large screens ------ */
+/* ----------------------------------------- */
+
+@media only screen 
+  and (min-width: 1200px){
+
+    .line-1 {
+      font-size: 3em;
+      padding-top: 36vh;
+  }
+
+    .home-links {
+      bottom: 40vh;
+    }
+
+  }

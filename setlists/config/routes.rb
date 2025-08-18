@@ -10,4 +10,9 @@ Rails.application.routes.draw do
     resources :songs
   end
   resources :songs
+  
+  # Fallback route for React Router (SPA)
+  get '*path', to: 'application#fallback_index_html', constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
 end

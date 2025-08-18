@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: setlists_production
-  username: setlists
-  password: <%= ENV['SETLISTS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

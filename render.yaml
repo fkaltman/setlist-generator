@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: setlist-generator
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: setlist-db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        generateValue: true
+      - key: RAILS_ENV
+        value: production
+      - key: RACK_ENV
+        value: production
+
+databases:
+  - name: setlist-db
+    databaseName: setlist_generator
+    user: setlist_user
