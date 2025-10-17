@@ -1,11 +1,10 @@
 import axios from "axios";
 
 // Smart environment detection for API URL
-const baseURL = process.env.NODE_ENV === 'production' 
-  ? window.location.origin + '/'  // Use same domain in production
-  : "http://localhost:3000/";     // Use localhost in development
-
-// TODO: Original Heroku URL was: https://floating-cove-34332.herokuapp.com/
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? window.location.origin + "/" // Use same domain in production (Heroku)
+    : "http://localhost:3000/"; // Use localhost in development
 
 // ------------------setlist api calls----------------------- //
 

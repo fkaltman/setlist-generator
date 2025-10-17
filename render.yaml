@@ -1,3 +1,6 @@
+# This file was for Render - keeping for reference
+# Railway doesn't need this file, it auto-detects everything
+
 services:
   - type: web
     name: setlist-generator
